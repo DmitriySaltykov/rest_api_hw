@@ -3,14 +3,12 @@ package first_api_test;
 
 import org.junit.jupiter.api.Test;
 
-
-
 import static io.restassured.RestAssured.given;
 import static io.restassured.http.ContentType.JSON;
 import static org.hamcrest.Matchers.is;
 
 
-public class LoginTest extends  TestBase{
+public class LoginTest extends TestBase {
     @Test
     void successfulLoginTest() {
         String authData = "{\"email\": \"eve.holt@reqres.in\",\"password\": \"cityslicka\"}";
@@ -29,7 +27,6 @@ public class LoginTest extends  TestBase{
                 .statusCode(200)
                 .body("token", is("QpwL5tke4Pnpja7X4"));
     }
-
 
 
     @Test

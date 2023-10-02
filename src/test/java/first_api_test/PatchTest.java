@@ -6,7 +6,7 @@ import static io.restassured.RestAssured.given;
 import static io.restassured.http.ContentType.JSON;
 import static org.hamcrest.Matchers.is;
 
-public class PatchTest extends  TestBase{
+public class PatchTest extends TestBase {
     @Test
     void UpdateInfoTest() {
         String authData = "{\"name\": \"morpheus\",\"job\": \"zion resident\"}";

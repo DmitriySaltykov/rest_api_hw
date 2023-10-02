@@ -4,10 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.http.ContentType.JSON;
-
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.not;
-import static org.hamcrest.Matchers.empty;
+import static org.hamcrest.Matchers.*;
 
 
 public class CreateTest extends TestBase {
@@ -33,6 +30,7 @@ public class CreateTest extends TestBase {
                 .body("createdAt", is(not(empty())));
 
     }
+
     @Test
     void createUserWithEmptyNameTest() {
         String createData = "{\"name\": \"\",\"job\": \"leader\"}";
@@ -54,6 +52,7 @@ public class CreateTest extends TestBase {
                 .body("createdAt", is(not(empty())));
 
     }
+
     @Test
     void createUserWithEmptyJobTest() {
         String createData = "{\"name\": \"morpheus\",\"job\": \"\"}";
@@ -75,6 +74,7 @@ public class CreateTest extends TestBase {
                 .body("createdAt", is(not(empty())));
 
     }
+
     @Test
     void successUpdateUserTest() {
         String createData = "{\"name\": \"morpheus\",\"job\": \"zion resident\"}";

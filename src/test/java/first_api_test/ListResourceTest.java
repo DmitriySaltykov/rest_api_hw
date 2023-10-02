@@ -8,7 +8,7 @@ import static org.hamcrest.Matchers.*;
 
 public class ListResourceTest extends TestBase {
     @Test
-    void successCreateUserTest() {
+    void ListResourseTest() {
         String createData = "{}";
 
         given()

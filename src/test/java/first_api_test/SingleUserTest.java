@@ -10,10 +10,10 @@ import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
 import static org.hamcrest.Matchers.empty;
 
-public class SingleUsetTest extends TestBase {
+public class SingleUserTest extends TestBase {
 
     @Test
-    void successCreateUserTest() {
+    void SingleUserTest() {
         String createData = "{}";
 
         given()
